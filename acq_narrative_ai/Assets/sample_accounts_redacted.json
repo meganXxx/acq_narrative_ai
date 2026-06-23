@@ -1,0 +1,136 @@
+[
+  {
+    "account_id": "sample-001",
+    "restaurant_name": "Saffron Harbor Kitchen",
+    "country": "Fictionland",
+    "city": "Northbridge",
+    "location": "Riverside Market District",
+    "cuisine": "Indian coastal",
+    "merchant_potential_tier": "A",
+    "strategic_priority_signals": {
+      "top_search": true,
+      "search_terms": [
+        "coastal curry",
+        "seafood biryani",
+        "Indian lunch"
+      ],
+      "dream_brand": false,
+      "low_choice": false,
+      "other_priority_flags": [
+        "strong_public_reputation"
+      ]
+    },
+    "historical_transcript_summary": null,
+    "previously_discussed_pain_points": [],
+    "known_objections": [],
+    "prior_partnership_status": "never_partnered",
+    "terminated": false,
+    "termination_reason": null,
+    "historical_performance_summary": null,
+    "online_footprint": {
+      "google_rating": 4.7,
+      "google_review_count": 1260,
+      "competitor_platform_presence": true,
+      "instagram_followers": 18400,
+      "website": "https://example.invalid/saffron-harbor",
+      "menu_url": "https://example.invalid/saffron-harbor/menu"
+    },
+    "sales_notes": "Fictional sample account. Strong review profile and visible online presence. Use demand-led and reputation leverage angles without exposing internal search data.",
+    "data_quality_notes": "Synthetic test data only. Public footprint values are fictional.",
+    "pitch_coaching_best_practices": [
+      "Lead with safe public visibility and cuisine relevance.",
+      "Do not mention Top Search or internal search terms.",
+      "Avoid promising order growth or customer acquisition."
+    ]
+  },
+  {
+    "account_id": "sample-002",
+    "restaurant_name": "Juniper Table",
+    "country": "Fictionland",
+    "city": "Eastvale",
+    "location": "Old Station Quarter",
+    "cuisine": "Modern vegetarian",
+    "merchant_potential_tier": "A",
+    "strategic_priority_signals": {
+      "top_search": false,
+      "search_terms": [],
+      "dream_brand": true,
+      "low_choice": false,
+      "other_priority_flags": [
+        "strategic_brand_fit"
+      ]
+    },
+    "historical_transcript_summary": "Previous fictional conversation noted interest in online ordering, but the merchant was concerned about kitchen workflow and menu setup effort.",
+    "previously_discussed_pain_points": [
+      "Operational complexity",
+      "Menu setup workload"
+    ],
+    "known_objections": [
+      "Concern that delivery orders could disrupt dine-in service",
+      "Concern about time required to configure menu items"
+    ],
+    "prior_partnership_status": "previous_conversation_no_partnership",
+    "terminated": false,
+    "termination_reason": null,
+    "historical_performance_summary": null,
+    "online_footprint": {
+      "google_rating": 4.5,
+      "google_review_count": 540,
+      "competitor_platform_presence": false,
+      "instagram_followers": 9200,
+      "website": "https://example.invalid/juniper-table",
+      "menu_url": "https://example.invalid/juniper-table/menu"
+    },
+    "sales_notes": "Fictional sample account. Treat as high-touch strategic brand outreach with operational support coaching.",
+    "data_quality_notes": "Synthetic test data only. Historical transcript summary is fictional and internal only.",
+    "pitch_coaching_best_practices": [
+      "Use strategic brand pitch internally but do not say Dream Brand externally.",
+      "Lead with consultative operational fit.",
+      "Ask discovery questions before assuming operational pain still applies."
+    ]
+  },
+  {
+    "account_id": "sample-003",
+    "restaurant_name": "Marigold Noodle House",
+    "country": "Fictionland",
+    "city": "Westport",
+    "location": "Canal Walk",
+    "cuisine": "Vietnamese",
+    "merchant_potential_tier": "B",
+    "strategic_priority_signals": {
+      "top_search": false,
+      "search_terms": [],
+      "dream_brand": false,
+      "low_choice": true,
+      "other_priority_flags": [
+        "win_back_candidate"
+      ]
+    },
+    "historical_transcript_summary": "Fictional prior conversation indicated the merchant felt the commercial model was difficult to justify at the time.",
+    "previously_discussed_pain_points": [
+      "High commission concern"
+    ],
+    "known_objections": [
+      "Commission or cost concerns"
+    ],
+    "prior_partnership_status": "previously_partnered",
+    "terminated": true,
+    "termination_reason": "High commission concerns",
+    "historical_performance_summary": "Internal fictional summary: prior partnership existed, but no performance metrics are provided in this sample.",
+    "online_footprint": {
+      "google_rating": 4.3,
+      "google_review_count": 310,
+      "competitor_platform_presence": true,
+      "instagram_followers": 4100,
+      "website": "https://example.invalid/marigold-noodle-house",
+      "menu_url": "https://example.invalid/marigold-noodle-house/menu"
+    },
+    "sales_notes": "Fictional sample account. Requires win-back and listening-first handling. Merchant-facing copy must not state internal termination details unless explicitly approved.",
+    "data_quality_notes": "Synthetic test data only. Termination reason is provided for internal strategy and should be handled carefully.",
+    "pitch_coaching_best_practices": [
+      "Lead with listening-first win-back language.",
+      "Do not promise improved economics or performance.",
+      "Ask what would need to be different for a renewed conversation to be useful."
+    ]
+  }
+]
