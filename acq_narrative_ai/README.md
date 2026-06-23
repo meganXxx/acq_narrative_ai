@@ -57,34 +57,6 @@ Detailed mode is available when a user explicitly asks for a full account brief,
 - `References/07_output_examples.md`: fictional examples showing safe internal interpretation and merchant-facing phrasing.
 - `References/08_quality_rubric.md`: scoring criteria, hard fail checks, quality control fields, and final decision guidance.
 
-## Manual POC Workflow
-
-Recommended first path:
-
-1. Prepare 3-5 fictional, synthetic, redacted, or otherwise approved test accounts.
-2. Load or paste `SKILL.md` and the relevant `References/` files into the approved company AI environment, such as Gemini Pro, Gemini Gem, or another approved tool.
-3. Use `Assets/prompt_manual_poc.md` if populated; otherwise write a short prompt asking for the default skill output format.
-4. Paste approved account data.
-5. Generate the concise Sales Context Summary, Pitch Narrative, and Review Notes.
-6. Review the output manually for factual accuracy, confidentiality, tone, and Sales usefulness.
-7. Score the output using `References/08_quality_rubric.md`.
-8. Iterate `SKILL.md`, `References/`, assets, and validators based on POC findings.
-
-## How to Use in Company Gemini Pro / Gemini Gem
-
-1. Create a Gem or new chat in the approved company AI environment.
-2. Add `SKILL.md` as the main instruction.
-3. Add relevant `References/` files as supporting context or uploads if the environment supports files.
-4. Add `PROJECT_CONTEXT.md` when a concise overview is useful.
-5. Use `Assets/prompt_manual_poc.md` if available; otherwise ask the model to follow the default output format in `SKILL.md`.
-6. Paste only approved, redacted, fictional, or otherwise permitted account data.
-7. Require output in the default concise skill format:
-   - Sales Context Summary
-   - Pitch Narrative
-   - Review Notes
-8. Ask for detailed mode only when a full account brief, full evidence map, or full quality control section is needed.
-9. Review all merchant-facing content before use.
-
 ## Data Safety and Confidentiality
 
 Do not put real confidential company data into this repo.
@@ -115,22 +87,6 @@ Merchant-facing copy must not expose:
 - Do not add real company data to sample files, assets, tests, or outputs.
 - Do not expose internal Sales reasoning in merchant-facing copy.
 
-## POC Evaluation
-
-Score outputs using `References/08_quality_rubric.md`.
-
-Evaluation categories:
-
-- Fact Accuracy Score.
-- Internal Sales Brief Quality.
-- Pitch Angle Relevance.
-- Merchant-facing Safety.
-- Pitch Coaching Adherence.
-- Sales Readability / Conciseness Score.
-- Ready-to-Use Score.
-- Hard Fail Checks.
-
-Hard fail checks include whether the output invented information, exposed internal labels, promised guaranteed outcomes, misused termination history, ignored a major pain point, sounded like mass outreach, assumed pain points without discovery, pushed before validating merchant interest, used competitor-negative claims, omitted key review notes, or was too long for Sales to use quickly.
 
 ## Future Automation Path
 
