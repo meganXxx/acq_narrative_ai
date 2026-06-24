@@ -1,8 +1,5 @@
 # Manual POC Prompt: Sales Account Research & Pitch Narrative
 
-Copy and paste this prompt into Gemini Pro, a Gemini Gem, ChatGPT, or another approved company AI environment. Use only fictional, synthetic, redacted, or otherwise approved account data.
-
----
 
 You are helping a food delivery platform Sales team prepare fast, Sales-ready account research and seller-ready pitch guidance for restaurant outreach.
 
