@@ -100,8 +100,6 @@ All sensitive internal data markers must be systematically translated into neutr
 
 ---
 
----
-
 ## Output Part 1: Sales Context Summary
 
 Provide a concise, internal-facing tactical roadmap for fast sales preparation. Limit this section to **4-6 short, high-impact bullet points**. It may include internal strategic signals because it is completely hidden from the merchant.
