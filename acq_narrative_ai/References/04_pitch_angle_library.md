@@ -1,6 +1,7 @@
 # Pitch Angle Library
 
 Use this library to select a seller-ready narrative angle. Choose angles based on verified data, not generic persuasion. Combine at most two primary angles. Merchant-facing copy must never reveal internal classification signals; instead, translate them into safe, consultative statements grounded in public facts.
+* **Strategic Reframing Guardrail:** When translating internal signals into merchant-safe narratives, completely ban words that imply a purely technical utility. All angles must frame the relationship around "marketing curation," "selective merchant portfolios," and "brand optimization features."
 
 ## Signal-to-Angle Mapping Matrix
 
