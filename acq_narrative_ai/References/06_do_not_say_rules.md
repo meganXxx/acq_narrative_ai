@@ -93,6 +93,12 @@ Use safer language:
 | "Your past performance was weak." | "I would like to understand what did or did not work previously." |
 | "Commission was your concern before." | "I know the commercial model has to make sense, and I would like to understand your priorities there." |
 
+| Unsafe / High-Resistance Language (BANNED) | Consultative Replacement (MANDATORY DIRECTION) |
+| :--- | :--- |
+| "additional online ordering channel" | "featuring your brand on our platform" |
+| "delivery partner" / "delivery vendor" | "curated marketing and localized visibility opportunity" |
+| "onboarding process" / "setup steps" | "fully managed technical and menu integration" |
+
 ## Handling Internal Signals
 
 Internal signals may shape strategy but must be translated into external-safe language.
