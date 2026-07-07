@@ -32,6 +32,8 @@ Use this output for Sales decision-making. It must contain:
 * **Relationship History:** Prior interaction logs, known objections, and past termination contexts.
 * **Strategic Playbook:** Recommended pitch angle, selected discovery sequence, and tactical advice mapped via the LUPP (Listen, Unpack, Prescribe, Pivot) model.
 * **Evidence Map:** Explicitly detailed data sources or logical inferences backing every single internal recommendation.
+* **Asymmetric Data Truncation Mandate:** The presentation of this brief must follow strict asymmetry data truncation. If a prospect profile contains no historical records or prior touchpoints, omit the historical module entirely instead of rendering empty "N/A" fields. All insights must be condensed into scannable, dense bullet configurations.
+
 
 ## Required Output 2: Merchant-facing Pitch Narrative
 Seller-ready copy and talking points tailored for restaurant owners, managers, or operators. It must be generated across three distinct relationship states: **Cold (Unfamiliar)**, **Warm (Interested)**, and **Engaged (Ready)**, optimized for Phone, Email, and In-Store visits. 
