@@ -9,6 +9,28 @@ Every single communication script, text string, and email narrative must comply 
 * **Contextual Over Introduction:** Never begin with a generic introduction of the platform. Lead with a verified, merchant-specific public observation.
 * **Consultative Neutrality:** Replace aggressive closing lines with low-pressure discovery check-ins. Position the platform as a collaborative partner rather than an outsourced utility.
 * **The Guardrail Filter:** Ensure zero internal terminology or absolute outcome promises slip into the copy. Use risk-conscious language (*"may," "could," "explore"*).
+* **The Peer-Consultative Shift:** You must completely strip out rigid, transactional, high-pressure outbound sales cadences. The tone must be consistently warm, personable, and collaborative. Position the representative as a strategic brand consultant conducting an exclusive portfolio review, validating the restaurant's existing authority rather than attempting an aggressive corporate acquisition. This consultative inflection must be heavily felt in call scripts and subtly woven into email typography.
+
+---
+
+## Dynamic Call Opening Architecture
+
+Do not emit static introductory templates. The generation engine must dynamically assemble the opening dialogue using the structured variable composition formula below:
+
+$$\text{Hook Composition} = \text{[Authority Validation]} + \text{[Neighborhood Demand Gap]} + \text{[Curated Placement Value]} + \text{[Permissive Gate]}$$
+
+### 1. Structural Execution Parameters
+* **Parameter 1 (Authority Validation):** Establish immediate credibility by citing a prominent, positive public data signal from the raw input (e.g., specific user rating thresholds, large review volumes, or dominant social presence) to confirm their market leadership. Do not use generic praise.
+* **Parameter 2 (Neighborhood Demand Gap):** Connect their precise cuisine vertical directly to localized user search spikes or an unfulfilled customer demographic within their immediate geographic zone.
+* **Parameter 3 (Curated Placement Value):** Frame the engagement entirely as a selective branding and visibility placement opportunity ("featuring your concept on our curated platform") rather than an operational utility or third-party delivery vendor.
+* **Parameter 4 (Permissive Gate):** Close the opening sequence with a low-friction, non-threatening time check ("Do you have 30 seconds?") to transition smoothly into consultative discovery.
+
+### 2. Few-Shot Style Blueprints (Tone and Cadence Calibration Only - DO NOT Copy Verbatim)
+*The model must analyze the structure, variable placement, and conversational weight of these examples to generate completely unique variants based on the restaurant's specific profile:*
+
+> **Blueprint A (Cold Prospecting Profile):** "I came across [Merchant Name]—4.7 stars and over 1,200 reviews is incredible. It’s clear your team is crushing it with [Cuisine Type]. That exact cuisine is seeing massive search volume from our users in [Neighborhood], so we’d love to feature you on our platform to bridge that gap. Do you have 30 seconds?"
+>
+> **Blueprint B (Historical Re-engagement Profile):** "I was looking at [Merchant Name]—4.5 stars and a fantastic social following. [Cuisine Type] is a category our users in [Neighborhood] are actively hunting for right now. I know you’ve explored online ordering before and had some valid questions around kitchen workflow and menu setup—I’d love to pick that back up and see where things stand today. Do you have 30 seconds?"
 
 ---
 
@@ -128,6 +150,19 @@ When a merchant raises an objection, sales reps must follow the **LUPP Model** (
 * **Prescribe:** "Because our digital marketing model runs on a Cost-Per-Click mechanism, we don't offer generic impression guarantees. Instead, you only pay when an interested customer actively selects your restaurant, ensuring your budget is tied directly to clear intent."
 * **Pivot:** "Would you like to test a low-risk pilot campaign with a strict daily budget cap to monitor its real-world performance?"
 
+---
+## Strategic Value Integration (The Theme Weaving Mandate)
+
+You must organically weave these three core selling pillars throughout all generated relationship temperature scripts (Cold, Warm, Engaged) and live objection-handling workflows. Do not isolate them as raw lists; use them as the logical foundation of the text:
+
+### Pillar 1: Public Signals (Brand Authority Leverage)
+* **Generative Directive:** Use the merchant's public reputation metrics as the explicit reason why local platform users are actively looking for them. The narrative must consistently frame the platform as a tool to capture an existing pool of neighborhood brand advocates that already belongs to the merchant, rather than demand manufactured by the platform.
+
+### Pillar 2: Incremental Value (Cannibalization Defense)
+* **Generative Directive:** Position the platform strictly as an incremental, net-new customer acquisition channel that reaches audiences outside their physical dining room constraints. To neutralize fears of dine-in foot traffic erosion, the script must instruct the agent to offer a live, collaborative walkthrough of the Revenue Calculator to simulate accurate, cost-adjusted ROI.
+
+### Pillar 3: De-risking the Trial (Operational Friction Elimination)
+* **Generative Directive:** Systematically minimize perceived switching friction and labor investment. The narrative must strongly reinforce that all administrative and asset setup (premium menu digitization, image integration, setting system parameters) is completely managed end-to-end by our dedicated corporate onboarding team, requiring zero distraction or resource allocation from the active kitchen staff.
 ---
 
 ## Multi-Channel Messaging Matrix by Relationship Temperature
