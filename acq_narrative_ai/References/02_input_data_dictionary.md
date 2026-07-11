@@ -17,6 +17,7 @@ For each field, preserve whether it is internal-only or potentially safe for mer
 | `account_status` | Current lifecycle or sales pipeline status of the account (e.g., New, In Negotiation, Collecting Documents, Quote Signed, Quality Check, Menu Processing, Onboarding, Terminated, Lost). | Internal only. | Segmenting accounts and routing to correct automated or manual workflows. | Long-term partner sentiment or definitive operational health. |
 | `preferred_language` | Primary language the merchant prefers for communication. | Internal and merchant-facing context. | Localizing outreach, selecting collateral, and matching with fluent representatives. | Absolute lack of proficiency in other regional languages. |
 | `output_language` | The target language expected for generated briefs, pitches, or system outputs. | Internal only. | Configuring automation pipelines and quality assurance checks. | The merchant's sole operational language. |
+| `lead_source_channel` | Whether this lead was self-sourced by Field Sales through their own discovery/research (`"field_sales_own_research"`) or came from any other source (system-provided leads worked by Telesales, e.g. scraping provider or merchant self-sign-up). | Internal only. | Determining whether the Online Research step (`References/09_online_research_protocol.md`) runs automatically or only on demand. | Lead quality, merchant intent, or account priority. |
 
 ## Potential and Priority Fields
 
@@ -27,6 +28,7 @@ For each field, preserve whether it is internal-only or potentially safe for mer
 | `search_terms` | Internal search terms associated with user interest. | Internal only unless explicitly approved for external use. | Understanding themes for internal planning. | Exact customer intent, restaurant-specific demand, or merchant-safe keywords. |
 | `dream_brand` | Internal strategic-priority signal for a target brand or restaurant. | Internal only. | High-touch strategic outreach planning. | Public brand status or merchant-facing priority label. |
 | `low_choice` | Internal signal that an area or category may have limited platform supply relative to user interest. | Internal only. | Local opportunity strategy. | External supply gap claims or market weakness. |
+| `top_gtc` | Internal signal that the account is active on a competitor's platform. | Internal only. | Targeting competitive sales opportunities and shaping outreach strategy. | Exclusive competitor contracts, total sales volume, or immediate willingness to switch. |
 | `other_priority_flags` | Additional internal prioritization signals. | Internal only unless documented otherwise. | Internal planning and risk review. | Merchant-safe claims without validation. |
 
 ## Market Context Fields **[NEW SECTION]**
@@ -67,6 +69,8 @@ For each field, preserve whether it is internal-only or potentially safe for mer
 | `has_website` | Boolean flag indicating if a valid primary website was located during data scraping pipelines. | Internal and merchant-facing if relevant. | Gauging fundamental digital footprint completeness and assessing technical setup. | Website traffic quality, conversion rate, or active content maintenance. |
 | `website` | Restaurant website. | Internal and merchant-facing if relevant. | Digital footprint and menu discovery. | Business quality or online ordering need. |
 | `menu_url` | Public menu link. | Internal and merchant-facing if relevant. | Understanding cuisine/category if menu details are provided. | Signature dishes or menu strategy unless visible and cited. |
+
+When any Online Footprint field above is populated via the Online Research step (`References/09_online_research_protocol.md`) rather than pre-supplied internally, it must be accompanied by a `source_url`, a `confidence` tier (verified / likely / unconfirmed), and a `retrieved_date`. Do not present online-research-derived values with the same certainty as pre-supplied internal values unless this metadata is included.
 
 ## Sales Notes
 
