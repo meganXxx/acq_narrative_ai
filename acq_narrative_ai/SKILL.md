@@ -18,6 +18,12 @@ Prioritize factual accuracy, evidence-based reasoning, advanced consultative Sal
 
 ---
 
+## Execution Model
+
+Steps 1–6 of this workflow are pure instruction-following: any LLM can execute them directly from supplied input data, with no tool access required. Step 0 (Online Research) is different in kind — it is still just a documented specification, but it cannot be executed by a plain text-completion model. It requires the executing system to be an agent with live web search/browsing tool access (see `References/09_online_research_protocol.md`, Prerequisites / Access Requirements). Both steps are skill specifications; only Step 0 has a hard dependency on tool-enabled execution.
+
+---
+
 ## Resource Map
 
 Load only the resources needed for the task. Use `PROJECT_CONTEXT.md` first when a concise repo-level summary is enough.
@@ -30,12 +36,16 @@ Load only the resources needed for the task. Use `PROJECT_CONTEXT.md` first when
 * `References/06_do_not_say_rules.md`: Prohibited claims, phrases, and messaging patterns.
 * `References/07_output_examples.md`: Examples of accepted output shape and tone.
 * `References/08_quality_rubric.md`: Scoring criteria for final outputs.
+* `References/09_online_research_protocol.md`: Trigger conditions, query method, disambiguation rules, and confidence tiers for the online research step.
 
 ---
 
 ## Core Operational Workflow
 
 The system must execute tasks in the following sequential order:
+[Step 0: Online Research ] -> Conditionally research public footprint before Step 1 (Ref/09).
+              requires: a tool-enabled agent with live web search/browsing access — a plain LLM cannot run this step.
+↓
 [ Step 1: Input Analysis ] -> Validate data integrity and catch missing metrics.
 ↓
 [ Step 2: Signal Isolation] -> Map data to the 7 Pitch Angles (Ref/04).
@@ -47,6 +57,14 @@ The system must execute tasks in the following sequential order:
 [ Step 5: Multi-Tier Draft] -> Generate segmented Cold/Warm/Engaged copy.
 ↓
 [ Step 6: Automated Audit ] -> Filter via compliance and failure-mode checks.
+              Steps 1-6 require: any standard LLM — no tool access needed, pure instruction-following over supplied input data.
+### 0. Online Research & Verification (Conditional)
+Before Step 1, check the account's `lead_source_channel` field (`References/02_input_data_dictionary.md`):
+* If `lead_source_channel = "field_sales_own_research"`: automatically perform the online research step described in `References/09_online_research_protocol.md` before proceeding. These leads typically start with only a restaurant name and location, so this step is usually the primary source of usable evidence.
+* For any other or unspecified `lead_source_channel` value (system-provided leads worked by Telesales): do not run this step by default. Only perform it if the user explicitly requests online research for the account.
+* This step requires an execution environment with live web search or browsing capability. If the current environment cannot perform live web lookups, skip this step entirely and mark affected `online_footprint` fields as not available in this session. Never fabricate a result to fill the gap. See "Prerequisites / Access Requirements" in `References/09_online_research_protocol.md` for the concrete access, data-source, and compliance requirements a production build needs.
+* Findings must follow the disambiguation and confidence-tiering rules in `References/09_online_research_protocol.md` and must not override or contradict any internal data already supplied; conflicts should be flagged for human review, not silently resolved.
+
 ### 1. Input Analysis & Verification
 Inspect supplied account data before drafting. Validate inputs against `Assets/input_schema.json` if available. Identify missing data elements required to establish an operational baseline. If essential values are missing, log them as discovery priorities.
 
@@ -100,12 +118,24 @@ All sensitive internal data markers must be systematically translated into neutr
 
 ---
 
+## Output Part 0: Online Research Findings (Conditional)
+
+Only produced when Step 0 (`References/09_online_research_protocol.md`) actually ran for this account. If Step 0 did not run (default for system-sourced leads, or skipped due to no tool access), omit this section entirely rather than rendering an empty placeholder.
+
+Present the raw findings as a short list or table, kept separate from the synthesized Sales Context Summary:
+* Each finding: what was found, **confidence tier** (verified / likely / unconfirmed), **source URL**, **retrieved date**.
+* State "not found" plainly for anything searched but unconfirmed. Never fill a gap with a guessed number.
+
+Whether the account is already an existing Delivery Hero/foodora partner is not part of this step — that comes from existing internal fields (`account_status`, `prior_partnership_status`), not from online research.
+
+---
+
 ## Output Part 1: Sales Context Summary
 
 Provide a concise, internal-facing tactical roadmap for fast sales preparation. Limit this section to **4-6 short, high-impact bullet points**. It may include internal strategic signals because it is completely hidden from the merchant.
 
 Include:
-* **Merchant Profile:** Absolute location baseline, cuisine category, and verified public operational data.
+* **Merchant Profile:** Absolute location baseline, cuisine category, and verified public operational data. When Output Part 0 exists, draw from it; otherwise use only supplied internal fields.
 * **Account Prioritization Context:** Relevant internal buying signals, marketplace value, and strategic priority drivers without translating them into merchant-safe language yet.
 * **Historical Context:** Prior partnership history, documented objections, or supplied termination reasons. If no termination details exist, explicitly state: *"Termination reason not provided."*
 * **Strategic Playbook Route:** Recommended pitch angle selection (e.g., Demand-led, Incremental Channel, Win-back, etc.) based on available evidence.
@@ -154,7 +184,7 @@ Provide a compact quality checklist consisting of **3-5 concise bullets** to est
 You must dynamically modulate the execution scope of the output according to the specificity of the user's prompt:
 
 * **Full Generation Baseline:** If the user request provides a general account data profile without specifying a target format or section restriction, you must execute the entire operational pipeline and render the comprehensive document as structured in the `Default Output Schema`.
-* **Micro-Component Isolation Overwrite:** If the user request explicitly isolates a single sub-section, micro-component, or targeted sales asset (e.g., requesting *only* the "1. Sales Context Summary", *only* the telephone "Call Opening", *only* a specific temperature variant like the written "Cold Outreach", *only* the text "Follow-up Message", *only* the custom "Objection Handling", or *only* the "3. Review Notes"), you must immediately execute an override. Completely bypass the full template structure and output **strictly and exclusively** the requested sub-component markdown text block. Do not generate conversational intros, unrequested parent sections, or adjacent placeholder headings.
+* **Micro-Component Isolation Overwrite:** If the user request explicitly isolates a single sub-section, micro-component, or targeted sales asset (e.g., requesting *only* the "0. Online Research Findings", *only* the "1. Sales Context Summary", *only* the telephone "Call Opening", *only* a specific temperature variant like the written "Cold Outreach", *only* the text "Follow-up Message", *only* the custom "Objection Handling", or *only* the "3. Review Notes"), you must immediately execute an override. Completely bypass the full template structure and output **strictly and exclusively** the requested sub-component markdown text block. Do not generate conversational intros, unrequested parent sections, or adjacent placeholder headings.
 
 ---
 ## Default Output Schema
@@ -163,6 +193,10 @@ The system must output text adhering to this complete markdown tree structure by
 
 ```markdown
 # Account: [restaurant_name] ([account_id])
+
+## 0. Online Research Findings (only if Step 0 ran; omit entirely otherwise)
+
+- [Finding]: [verified / likely / unconfirmed] — [source URL] — [retrieved date]
 
 ## 1. Sales Context Summary
 
