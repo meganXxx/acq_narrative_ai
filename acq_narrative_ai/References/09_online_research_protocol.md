@@ -54,7 +54,7 @@ This document defines the required *behavior* (query method, disambiguation rule
 - Always search using `restaurant_name + location/address` together. Never search by name alone — same-name collisions across chains, franchises, and even different cities or countries are common (see Disambiguation Rule).
 - Perform separate, targeted lookups for:
   1. Business identity and address confirmation.
-  2. Cuisine or category.
+  2. Cuisine or category and Menu Baseline..
   3. Public rating and review count (Google and other aggregators).
   4. Presence on delivery platforms (e.g. Uber Eats, Wolt, and other platforms common in the local market).
   5. Official website.
