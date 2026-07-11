@@ -6,6 +6,7 @@
     "city": "Northbridge",
     "location": "Riverside Market District",
     "cuisine": "Indian coastal",
+    "lead_source_channel": "system_lead",
     "merchant_potential_tier": "A",
     "strategic_priority_signals": {
       "top_search": true,
@@ -50,6 +51,7 @@
     "city": "Eastvale",
     "location": "Old Station Quarter",
     "cuisine": "Modern vegetarian",
+    "lead_source_channel": "system_lead",
     "merchant_potential_tier": "A",
     "strategic_priority_signals": {
       "top_search": false,
@@ -96,6 +98,7 @@
     "city": "Westport",
     "location": "Canal Walk",
     "cuisine": "Vietnamese",
+    "lead_source_channel": "system_lead",
     "merchant_potential_tier": "B",
     "strategic_priority_signals": {
       "top_search": false,
@@ -131,6 +134,82 @@
       "Lead with listening-first win-back language.",
       "Do not promise improved economics or performance.",
       "Ask what would need to be different for a renewed conversation to be useful."
+    ]
+  },
+  {
+    "account_id": "sample-004-real",
+    "restaurant_name": "Sannegården Karlskoga",
+    "country": "Sweden",
+    "city": "Karlskoga",
+    "location": "Frödingsvägen 14, Karlskoga, Sweden",
+    "cuisine": null,
+    "lead_source_channel": "field_sales_own_research",
+    "merchant_potential_tier": "A",
+    "strategic_priority_signals": {
+      "top_search": false,
+      "search_terms": [],
+      "dream_brand": false,
+      "low_choice": true,
+      "other_priority_flags": []
+    },
+    "historical_transcript_summary": null,
+    "previously_discussed_pain_points": [],
+    "known_objections": [],
+    "prior_partnership_status": "unknown",
+    "terminated": null,
+    "termination_reason": null,
+    "historical_performance_summary": null,
+    "online_footprint": {
+      "google_rating": null,
+      "google_review_count": null,
+      "competitor_platform_presence": null,
+      "instagram_followers": null,
+      "website": null,
+      "menu_url": null
+    },
+    "sales_notes": "Real account added specifically to test the inline online-research context layer. Internal history is sparse by design; online_footprint fields are intentionally left null pending live research.",
+    "data_quality_notes": "Cuisine, historical context, and online footprint not provided at input time; pending online research and verification. Contact details (phone/email) intentionally excluded from this file per repo data policy (see README Data Safety and Confidentiality). 'Top GTC' tag is not a defined signal in References/03_priority_signal_definitions.md.",
+    "pitch_coaching_best_practices": [
+      "Treat as discovery-first until online research fills in public footprint data.",
+      "Do not assume cuisine, pain points, or objections that were not supplied."
+    ]
+  },
+  {
+    "account_id": "sample-005-real",
+    "restaurant_name": "Amo Seafood",
+    "country": "Sweden",
+    "city": "Sundbyberg",
+    "location": "Järnvägsgatan 52A, Sundbyberg, Sweden",
+    "cuisine": null,
+    "lead_source_channel": "field_sales_own_research",
+    "merchant_potential_tier": "A",
+    "strategic_priority_signals": {
+      "top_search": false,
+      "search_terms": [],
+      "dream_brand": true,
+      "low_choice": true,
+      "other_priority_flags": []
+    },
+    "historical_transcript_summary": null,
+    "previously_discussed_pain_points": [],
+    "known_objections": [],
+    "prior_partnership_status": "unknown",
+    "terminated": null,
+    "termination_reason": null,
+    "historical_performance_summary": null,
+    "online_footprint": {
+      "google_rating": null,
+      "google_review_count": null,
+      "competitor_platform_presence": null,
+      "instagram_followers": null,
+      "website": null,
+      "menu_url": null
+    },
+    "sales_notes": "Real account added specifically to test the inline online-research context layer. Internal history is sparse by design; online_footprint fields are intentionally left null pending live research.",
+    "data_quality_notes": "Cuisine, historical context, and online footprint not provided at input time; pending online research and verification. Contact details (phone/email) intentionally excluded from this file per repo data policy (see README Data Safety and Confidentiality).",
+    "pitch_coaching_best_practices": [
+      "Treat as discovery-first until online research fills in public footprint data.",
+      "Do not assume cuisine (e.g. do not infer 'seafood' from the restaurant name alone) until confirmed by research."
     ]
   }
 ]
