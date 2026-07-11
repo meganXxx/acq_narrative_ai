@@ -102,7 +102,7 @@ Do not say:
 - "We ranked you highly in our internal scoring."
 - "You are a low-tier account."
 
-## Competitor Platform Presence
+## Top GTC or Competitor Platform Presence
 
 Definition:
 
